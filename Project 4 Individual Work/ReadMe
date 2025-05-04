@@ -14,8 +14,14 @@
   - Run FinalRace.m (this script will automatically call the model and initialization files) 
     
 ## Summary of Work
-Ensured all EV parameters defined in P4init.m match AME 24 specifications, added animation script to visualize laps, and added SOC vs. Time plot to quickly determine if meeting project criteria. During our simulation we 
-achieved 40 laps around the track in 60 minutes without leaving the track. The EV begins the simulation with an SOC of 80% and ends with approximately 55%. This is in part due to maintaining 95% regen braking at speeds 
-greater than 25 mph, linearly decreasing regen braking from 95% between 25 and 5 mph, and 100% friction breaking below 5 mph. The increase in SOC for every braking zone is visible on the SOC vs Time plot as a smooth 
-increasing curve prior to a linear decrease as the car accelerates out of braking. Additionally, our EV has a 1 speed transmission for simplicity. With all of these features in mind we have achieved all the team deliverables 
-outlined for Project 4 and are satisfied with the simulation results. 
+The individual project dealt with a track that covered varying height from 0 to 10 meters. The model from week 3 of team project 4 was used as a base for this project. To begin, 
+the script in GenTrack was modified to include the height of the track. The equation given in the deliverables was input in the correct if statements in order to create an increasing
+and decreasing height on both of the straightaway sections. Furthermore, it was assumed that the car never lost contact with the track even when the height was changing. The next step
+was to modify the function in the 'calculate error of angle' block in the driver function of the Simulink model. The original equation from the group project did not run with my computer system, 
+so it was changed to "steer_angle = atan2(sin(target_angle - current_angle), cos(target_angle - current_angle));" to accomplish the same goal. The incline angle on the track would now change the
+normal force on the car, subsequently changing the frictional force working against the motion. In order to account for this change, the calculation for the normal force was modified in the tire
+tractive force function block in the wheel subsystem. To do this, the x value of the car was added as an input, and if statements were written in the function to specify if the car was on 
+an inclined or a flat section. If the car was on an angled section, the normal force equation was multiplied by the cosine of the given angle (arctan of 10/900) of the incline. This correctly
+modified the frictional forces that would be affected from the change in height of the track. When the model is run, an SOC vs Time plot appears to show that the project requirements are met. 
+The angle of incline is so small that the frictional force is not greatly affected, meaning that the simulation achieves 40 laps around the track in one hour. The simulated car has a 1 speed gear
+box, and the SOC is consistantly within the given bounds, meeting the requirements of project 4.

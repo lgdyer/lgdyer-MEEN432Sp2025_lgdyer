@@ -19,5 +19,3 @@ achieved 40 laps around the track in 60 minutes without leaving the track. The E
 greater than 25 mph, linearly decreasing regen braking from 95% between 25 and 5 mph, and 100% friction breaking below 5 mph. The increase in SOC for every braking zone is visible on the SOC vs Time plot as a smooth 
 increasing curve prior to a linear decrease as the car accelerates out of braking. Additionally, our EV has a 1 speed transmission for simplicity. With all of these features in mind we have achieved all the team deliverables 
 outlined for Project 4 and are satisfied with the simulation results. 
-            
-

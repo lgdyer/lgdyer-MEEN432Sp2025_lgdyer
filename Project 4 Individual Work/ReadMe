@@ -1,4 +1,4 @@
-# PROJECT 4 WEEK 3
+# PROJECT 4 INDIVIDUAL WORK
 
 ## How to Run
 ### Files Needed:
@@ -11,7 +11,7 @@
 
 
 ### Execution Steps:
-  - Run FinalRace.m (initialization files and model called inside this script) 
+  - Run FinalRace.m (this script will automatically call the model and initialization files) 
     
 ## Summary of Work
 Ensured all EV parameters defined in P4init.m match AME 24 specifications, added animation script to visualize laps, and added SOC vs. Time plot to quickly determine if meeting project criteria. During our simulation we 

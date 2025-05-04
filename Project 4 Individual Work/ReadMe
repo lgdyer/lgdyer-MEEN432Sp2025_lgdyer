@@ -1,1 +1,23 @@
+# PROJECT 4 WEEK 3
+
+## How to Run
+### Files Needed:
+  - P4_model.slx
+  - P4init.m
+  - GenTrack.m
+  - FinalRace.m 
+  - raceStat.m
+  - Animate_Track.m
+
+
+### Execution Steps:
+  - Run FinalRace.m (initialization files and model called inside this script) 
+    
+## Summary of Work
+Ensured all EV parameters defined in P4init.m match AME 24 specifications, added animation script to visualize laps, and added SOC vs. Time plot to quickly determine if meeting project criteria. During our simulation we 
+achieved 40 laps around the track in 60 minutes without leaving the track. The EV begins the simulation with an SOC of 80% and ends with approximately 55%. This is in part due to maintaining 95% regen braking at speeds 
+greater than 25 mph, linearly decreasing regen braking from 95% between 25 and 5 mph, and 100% friction breaking below 5 mph. The increase in SOC for every braking zone is visible on the SOC vs Time plot as a smooth 
+increasing curve prior to a linear decrease as the car accelerates out of braking. Additionally, our EV has a 1 speed transmission for simplicity. With all of these features in mind we have achieved all the team deliverables 
+outlined for Project 4 and are satisfied with the simulation results. 
+            
 
